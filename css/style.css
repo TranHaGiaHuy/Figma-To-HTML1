@@ -11,7 +11,6 @@ html {
 }
 
 body {
-  height: 1000px;
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
 }
@@ -437,16 +436,20 @@ a {
 /* =================quote================= */
 
 .quote {
-  height: 380px;
   background: #2e2100;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.feedback-list {
+  display: flex;
+  overflow: hidden;
 }
 
 .quote-body {
-  padding-top: 96px;
-  padding-bottom: 96px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .quote-body .info {
@@ -457,6 +460,7 @@ a {
   width: 72px;
   height: 72px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .quote-body .info .author-name {
@@ -476,13 +480,28 @@ a {
   margin-top: 4px;
 }
 
-.quote-body .info .quote-carousel {
-  margin-top: 28px;
+.quote-body .info .dots {
   width: 30px;
   height: 6px;
+  display: flex;
+  gap: 6px;
+  margin-top: 28px;
+}
+
+.quote-body .info .dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #634700;
+  cursor: pointer;
+}
+
+.quote-body .info .dots .dot.active {
+  background-color: #ffb900;
 }
 
 .quote-body .content {
+  width: 66%;
   margin-left: 241px;
 }
 
@@ -496,4 +515,285 @@ a {
   font-size: 2.6rem;
   font-style: italic;
   line-height: 1.54;
+  margin-left: 30px;
+}
+
+/* =====================feature======================= */
+
+.features {
+  margin-top: 135px;
+  padding: 65px 0px;
+}
+
+.feature-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-item .images {
+  display: flex;
+  gap: 30px;
+}
+
+.feature-item .images img {
+  width: 270px;
+  height: 404px;
+  object-fit: cover;
+  border-radius: 16px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+}
+
+.feature-item .images img.lower {
+  margin-top: 34px;
+}
+
+.feature-item .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 41%;
+}
+
+.feature-item .desc {
+  margin-top: 16px;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  /* 175% */
+}
+
+.feature-item .content a.btn {
+  width: 137px;
+  height: 50px;
+  border-radius: 26px;
+  background: #ffb900;
+  margin-top: 32px;
+}
+
+.feature2 {
+  margin-top: 135px;
+  padding: 65px 0px;
+}
+
+.feature2 .content {
+  width: 48.7%;
+}
+
+.feature2 .images img {
+  width: 470px;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 20px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+}
+
+/* =============================blog=============================== */
+
+.blog {
+  margin-top: 135px;
+  padding: 96px 0px;
+  background: #fffcf4;
+}
+
+.blog-body .blog-top {
+  width: 448px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.blog-body p.desc {
+  margin-top: 16px;
+  color: #696262;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  /* 175% */
+}
+
+.blog-body .item-list {
+  display: flex;
+  margin-top: 55px;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.blog-body .item-list .item {
+  flex-shrink: 0;
+  width: calc(100% / 3 - 60px / 3);
+  background-color: #ffffff;
+}
+
+.blog-body .item-list .item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blog-body .item-list .thumb {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: flex;
+  border-radius: 16px 16px 0px 0px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+}
+
+.blog-body .info {
+  padding: 20px 20px 28px;
+}
+
+.blog-body .info .date {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 12px;
+  /* 185.714% */
+}
+
+.blog-body .info .date::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #ffb900;
+  border-radius: 50%;
+  margin-right: 4px;
+  /* 185.714% */
+}
+
+.blog-body .info .date::after {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: -27px;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+  /* 185.714% */
+}
+
+.blog-body .info h3 {
+  color: #171100;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+  /* 175% */
+  margin-top: 12px;
+}
+
+.blog-body .info .btn {
+  font-size: 1.4rem;
+  margin-top: 12px;
+}
+
+.blog-body .info .btn:hover {
+  background-color: #ffb900;
+}
+
+.blog-body .dots {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 6px;
+  margin-top: 38px;
+}
+
+.blog-body .dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #5f5b53;
+  cursor: pointer;
+}
+
+.blog-body .dots .dot.active {
+  cursor: default;
+  background-color: #ffb900;
+}
+
+/* ==============================foooter=========================== */
+
+footer {
+  padding: 96px 0px 0px;
+  background: #2e2100;
+}
+
+footer .information {
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+  display: flex;
+}
+
+footer .information .row {
+  width: calc((100% - 35%) / 3);
+}
+
+footer .information .lesson {
+  width: 35%;
+}
+
+footer .information .lesson p.desc {
+  margin-top: 18px;
+  max-width: 267px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.85;
+  /* 185.714% */
+}
+
+footer .information .lesson .social-icon {
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+  /* 185.714% */
+}
+
+footer .information .title {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+  border-bottom: 1px solid #59554b;
+  display: inline-block;
+  padding-bottom: 14px;
+  padding-right: 48px;
+  /* 175% */
+}
+
+footer .information a {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.85;
+}
+
+footer .information ul {
+  margin-top: 28px;
+}
+
+footer .information li:last-child a {
+  margin-bottom: 0px;
+}
+
+footer .information strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.85;
+  /* 185.714% */
+}
+
+.copyright {
+  padding: 28px 0px;
+}
+
+.copyright p.desc {
+  color: #807d74;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.85;
+  /* 185.714% */
 }
